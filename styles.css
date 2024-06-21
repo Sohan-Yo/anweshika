@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body{
+    min-height: 100vh;
+    background: url('./images/home.png') no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.logo{
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-size: 25px;
+    color: white;
+    text-decoration: none;
+    margin-left: 0;
+}
+
+.navbar a{
+    position: relative;
+    font-size: 18px;
+    color: white;
+    font-weight: 500;
+    text-decoration: none;
+    margin-left: 40px;
+}
+
+.navbar a::before{
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: white;
+    transition: .3s;
+}
+
+.navbar a:hover::before{
+    width: 100%;
+}
+
+.menu{
+    width: 50px;
+    margin-right: -30px;
+    display: none;
+    cursor: pointer;
+}
+
+.dropdown{
+    display: none;
+    position: absolute;
+    right: 2rem;
+    top: 70px;
+    height: 0;
+    width: 250px;
+    background: rgba(255, 255, 255, 0.123);
+    border-radius: 15px;
+    backdrop-filter: blur(15px);
+    overflow: hidden;
+    transition: height .2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.dropdown.open{
+    height: 150px;
+}
+
+.dropdown a{
+    display: block;
+    position: relative;
+    font-size: 18px;
+    color: white;
+    font-weight: 500;
+    text-decoration: none;
+    margin-right: 20px;
+    margin-top: 3px;
+    margin-bottom: 3px;
+    text-align: right;
+}
+
+
+/* Responsiveness */
+
+@media (max-width: 1040px){
+    .navbar a{
+        display: none;
+    }
+    .logo{
+        margin-left: 0px;
+    }
+    .menu{
+        display: flex;
+    }
+    .dropdown{
+        display: block;
+    }
+
+}
+
+.container{
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+    height: 84vh;
+    overflow: auto; /* Allows scrolling */
+    scrollbar-width: none; /* For Firefox */
+    margin-top: 50px;
+    position: relative;
+}
+
+section{
+    height: 84vh;
+    display: flex;
+    scroll-snap-align: start;
+    overflow: auto; /* Allows scrolling */
+}
+.HeroSec{
+    justify-content: center;
+    align-items: center;
+}
+
+body::-webkit-scrollbar {
+    display: none; /* For Chrome, Safari, and Opera */
+}
+
+.earth{
+    height: 100%;
+    width: fit-content;
+    position: absolute;
+}
+.textOverlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: 40px;
+    color: white;
+}
+.heroTitle{
+    background-color: rgba(0, 0, 0, 0.5); /* Optional: Add background color with transparency for better readability */
+    border-radius: 5px; /* Optional: Rounded corners */
+}
+
+.features{
+    color: white;
+    font-size: 30px;
+    display: block;
+}
+
+.experts{
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.transparent {
+    background-color: transparent;
+}
+
+.opaque {
+    background-color: rgba(0, 0, 0, 0.788);
+}
+
