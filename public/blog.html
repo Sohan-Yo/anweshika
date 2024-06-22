@@ -20,14 +20,14 @@
         <a href="#">Help</a>
           
         </nav>
-        <img class="menu" src="./images/menu.png" alt="">
+        <img class="menu" src="../images/menu.png" alt="">
     
         <div class="dropdown">
-            <a href="./public/history.html">Home</a>
-            <a href="./public/geo.html">Education</a>
-            <a href="./public/eco.html">Blog</a>
-            <a href="./public/dp.html">Quiz</a>
-            <a href="./public/dp.html">Help</a>
+          <a href="./home.html">Home</a>
+            <a href="./education.html">Education</a>
+            <a href="./blog.html">Blog</a>
+            <a href="./public/#">Quiz</a>
+            <a href="./public/#">Help</a>
         </div>
       </header>
 <div style="display: inline-block; height: 10px; width: fit-content;"></div>
@@ -278,6 +278,15 @@
         </div>
       
       </main>
+      <script>
+        const toggleBtn = document.querySelector(".menu");
+        const dropdown = document.querySelector(".dropdown");
+        
+        toggleBtn.addEventListener("click", function(){
+          dropdown.classList.toggle("open")
+        });
+    
+      </script>
 
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     
